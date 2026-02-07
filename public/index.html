@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rainbet Clone</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="logo">Rainbet</div>
+      <nav class="site-nav">
+        <a href="#home">Home</a>
+        <a href="#casino">Casino</a>
+        <a href="#originals">Originals</a>
+        <a href="#sportsbook">Sportsbook</a>
+        <a href="#promotions">Promotions</a>
+        <a href="#vip">VIP</a>
+      </nav>
+      <div class="header-actions">
+        <select class="language-select" aria-label="Select language">
+          <option>EN</option>
+          <option>ES</option>
+          <option>FR</option>
+        </select>
+        <button class="ghost-button">Login</button>
+        <button class="primary-button">Register</button>
+      </div>
+    </header>
+
+    <main id="home">
+      <section class="hero">
+        <div class="hero-slider">
+          <div class="hero-slide active">
+            <div class="hero-copy">
+              <p class="eyebrow">Weekly Rewards</p>
+              <h1>$20,000 Weekly Raffle</h1>
+              <p>Join our fictional giveaways and climb the VIP ladder.</p>
+              <div class="hero-actions">
+                <button class="primary-button">Join Now</button>
+                <button class="ghost-button">Learn More</button>
+              </div>
+            </div>
+          </div>
+          <div class="hero-slide">
+            <div class="hero-copy">
+              <p class="eyebrow">Originals Spotlight</p>
+              <h1>Plinko Drops All Day</h1>
+              <p>Fast rounds, instant results, and a responsive balance tracker.</p>
+              <div class="hero-actions">
+                <button class="primary-button">Play Plinko</button>
+                <button class="ghost-button">View Odds</button>
+              </div>
+            </div>
+          </div>
+          <div class="hero-slide">
+            <div class="hero-copy">
+              <p class="eyebrow">Sportsbook</p>
+              <h1>Live Matches + Quick Bets</h1>
+              <p>Track odds, place a demo bet, and watch payouts update.</p>
+              <div class="hero-actions">
+                <button class="primary-button">Explore Sportsbook</button>
+                <button class="ghost-button">Live Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="hero-balance">
+          <div>
+            <p class="balance-label">Demo Balance</p>
+            <h3 id="balance">$1,000.00</h3>
+          </div>
+          <button class="ghost-button" id="resetBalance">Reset Balance</button>
+        </div>
+      </section>
+
+      <section id="originals" class="section">
+        <div class="section-header">
+          <h2>Casino Originals</h2>
+          <div class="filters">
+            <button class="chip active">All</button>
+            <button class="chip">New</button>
+            <button class="chip">Popular</button>
+            <button class="chip">Slots</button>
+            <button class="chip">Originals</button>
+          </div>
+        </div>
+        <div class="game-grid">
+          <article class="game-card">
+            <div class="game-thumb plinko"></div>
+            <div class="game-info">
+              <h3>Plinko</h3>
+              <button class="primary-button" data-game="plinko">Play</button>
+            </div>
+          </article>
+          <article class="game-card">
+            <div class="game-thumb dice"></div>
+            <div class="game-info">
+              <h3>Dice</h3>
+              <button class="primary-button" data-game="dice">Play</button>
+            </div>
+          </article>
+          <article class="game-card">
+            <div class="game-thumb limbo"></div>
+            <div class="game-info">
+              <h3>Limbo</h3>
+              <button class="primary-button" data-game="limbo">Play</button>
+            </div>
+          </article>
+          <article class="game-card">
+            <div class="game-thumb slots"></div>
+            <div class="game-info">
+              <h3>Slots</h3>
+              <button class="ghost-button" disabled>Coming Soon</button>
+            </div>
+          </article>
+          <article class="game-card">
+            <div class="game-thumb crash"></div>
+            <div class="game-info">
+              <h3>Crash</h3>
+              <button class="ghost-button" disabled>Coming Soon</button>
+            </div>
+          </article>
+          <article class="game-card">
+            <div class="game-thumb roulette"></div>
+            <div class="game-info">
+              <h3>Roulette</h3>
+              <button class="ghost-button" disabled>Coming Soon</button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="casino" class="section highlight">
+        <div class="section-header">
+          <h2>Casino Lobby</h2>
+          <p>Curated slots and table games with instant demo payouts.</p>
+        </div>
+        <div class="lobby-grid">
+          <div class="lobby-card">
+            <h4>New Releases</h4>
+            <p>Fresh visuals and quick spins.</p>
+          </div>
+          <div class="lobby-card">
+            <h4>Top Slots</h4>
+            <p>Fan favorites updated daily.</p>
+          </div>
+          <div class="lobby-card">
+            <h4>Table Games</h4>
+            <p>Classic tables with demo chips.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="sportsbook" class="section">
+        <div class="section-header">
+          <h2>Sportsbook</h2>
+          <p>Popular matches with quick bet cards.</p>
+        </div>
+        <div class="sportsbook-grid">
+          <article class="sports-card">
+            <div>
+              <h4>Thunder vs. Monarchs</h4>
+              <p>Starts in 20 min</p>
+            </div>
+            <div class="odds">
+              <button>1.85</button>
+              <button>2.10</button>
+              <button>3.40</button>
+            </div>
+          </article>
+          <article class="sports-card">
+            <div>
+              <h4>Falcons vs. Lions</h4>
+              <p>Live - Q3</p>
+            </div>
+            <div class="odds">
+              <button>1.40</button>
+              <button>2.55</button>
+              <button>4.20</button>
+            </div>
+          </article>
+          <article class="sports-card">
+            <div>
+              <h4>Rockets vs. Storm</h4>
+              <p>Starts in 2 hrs</p>
+            </div>
+            <div class="odds">
+              <button>1.92</button>
+              <button>2.05</button>
+              <button>3.05</button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="vip" class="section highlight">
+        <div class="section-header">
+          <h2>Rewards & VIP</h2>
+          <p>Track your progression across tiers.</p>
+        </div>
+        <div class="vip-panel">
+          <div class="vip-tiers">
+            <span>Bronze</span>
+            <span>Silver</span>
+            <span>Gold</span>
+            <span>Platinum</span>
+            <span>Diamond</span>
+          </div>
+          <div class="vip-progress">
+            <div class="vip-progress-bar"></div>
+          </div>
+          <div class="vip-stats">
+            <div>
+              <p>Weekly Wager</p>
+              <h4>$4,500</h4>
+            </div>
+            <div>
+              <p>Next Bonus</p>
+              <h4>$500</h4>
+            </div>
+            <div>
+              <p>Level</p>
+              <h4>Gold</h4>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="promotions" class="section">
+        <div class="section-header">
+          <h2>Promotions & Challenges</h2>
+          <p>Daily missions, seasonal promos, and VIP bonuses.</p>
+        </div>
+        <div class="promo-grid">
+          <article class="promo-card">
+            <h4>Daily Challenge</h4>
+            <p>Play 20 rounds to unlock bonus spins.</p>
+          </article>
+          <article class="promo-card">
+            <h4>Free Spins Friday</h4>
+            <p>Claim free spins every Friday.</p>
+          </article>
+          <article class="promo-card">
+            <h4>VIP Boost</h4>
+            <p>Unlock a 10% boost with Gold tier.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-links">
+        <a href="#">About</a>
+        <a href="#">Terms</a>
+        <a href="#">Privacy</a>
+        <a href="#">Responsible Gaming</a>
+        <a href="#">Contact</a>
+      </div>
+      <div class="payments">
+        <span>BTC</span>
+        <span>ETH</span>
+        <span>USDT</span>
+        <span>USD</span>
+      </div>
+    </footer>
+
+    <div class="support-widget">Live Support</div>
+
+    <div class="modal" id="gameModal" aria-hidden="true">
+      <div class="modal-content">
+        <button class="close-button" id="closeModal">×</button>
+        <div class="modal-header">
+          <h3 id="gameTitle">Game</h3>
+          <div class="modal-balance">Balance: <span id="modalBalance">$0.00</span></div>
+        </div>
+        <div class="game-body" id="gameBody"></div>
+      </div>
+    </div>
+
+    <script src="casino.js"></script>
+  </body>
+</html>
