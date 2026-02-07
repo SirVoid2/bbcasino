@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plinko Clone</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <aside class="panel panel-left">
+        <div class="panel-section">
+          <label class="label" for="betAmount">Bet Amount</label>
+          <div class="input-row">
+            <input id="betAmount" type="number" value="0.00" />
+            <div class="modifier-buttons">
+              <button type="button" class="modifier">1/2</button>
+              <button type="button" class="modifier">2×</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel-section">
+          <span class="label">Risk Level</span>
+          <div class="pill-group">
+            <button type="button" class="pill active">Low</button>
+            <button type="button" class="pill">Medium</button>
+            <button type="button" class="pill">High</button>
+            <button type="button" class="pill">Rain</button>
+          </div>
+        </div>
+
+        <div class="panel-section">
+          <span class="label">Rows</span>
+          <div class="rows-control">
+            <span class="rows-value">16</span>
+            <div class="slider">
+              <div class="slider-track">
+                <div class="slider-fill"></div>
+              </div>
+              <div class="slider-handle"></div>
+              <div class="slider-markers">
+                <span></span><span></span><span></span><span></span><span></span><span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel-section">
+          <span class="label">Auto Bet</span>
+          <div class="auto-bet">
+            <div class="auto-speed">5×</div>
+            <div class="auto-controls">
+              <button type="button" class="icon-button">Ⅱ</button>
+              <div class="auto-slider">
+                <div class="auto-slider-fill"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button class="primary-button" type="button">Stop Demo Auto Bet</button>
+        <button class="secondary-button" type="button">Enter Bet Amount For Real Play</button>
+      </aside>
+
+      <main class="board">
+        <div class="board-header">
+          <div class="board-title">
+            <span class="title-dot"></span>
+            <span class="title-dot"></span>
+            <span class="title-dot"></span>
+            <span>Plinko</span>
+          </div>
+          <div class="board-status">
+            <span id="seedLabel">Seed: --</span>
+            <span>Fair Play</span>
+          </div>
+        </div>
+
+        <div class="board-canvas">
+          <canvas id="plinkoCanvas" width="1040" height="900"></canvas>
+        </div>
+
+        <div class="bins">
+          <div class="bin red">16x</div>
+          <div class="bin red">9x</div>
+          <div class="bin orange">2x</div>
+          <div class="bin amber">1.4x</div>
+          <div class="bin amber-light">1.2x</div>
+          <div class="bin yellow">1.1x</div>
+          <div class="bin yellow-light">1x</div>
+          <div class="bin lime">0.5x</div>
+          <div class="bin yellow-light">1x</div>
+          <div class="bin yellow">1.1x</div>
+          <div class="bin amber-light">1.2x</div>
+          <div class="bin amber">1.4x</div>
+          <div class="bin orange">2x</div>
+          <div class="bin red">9x</div>
+          <div class="bin red">16x</div>
+          <div class="bin red">9x</div>
+          <div class="bin red">16x</div>
+        </div>
+      </main>
+
+      <aside class="panel panel-right">
+        <div class="legend">
+          <div class="legend-item">0.5x</div>
+          <div class="legend-item">1x</div>
+          <div class="legend-item">1.1x</div>
+          <div class="legend-item">1.2x</div>
+          <div class="legend-item">1.4x</div>
+        </div>
+      </aside>
+    </div>
+
+    <script src="plinko.js"></script>
+  </body>
+</html>
