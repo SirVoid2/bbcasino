@@ -62,17 +62,3 @@ Key methods to implement:
 ## Provably fair notes
 
 Each session generates a `serverSeed` and returns the `serverSeedHash` to the client. A `clientSeed` plus a monotonically increasing `nonce` determine the ball path for each bet.
-
-## Deploying to Vercel
-
-### Option A: Static casino site only (recommended)
-The casino UI lives in `public/`, so you can deploy it as a static site.
-
-1. Create a new Vercel project and import this repo.
-2. Set **Framework Preset** to `Other`.
-3. Leave **Build Command** empty.
-4. Set **Output Directory** to `public`.
-5. Deploy.
-
-### Option B: API + static site
-If you want to deploy the Express API alongside the static site, you will need to add a Vercel serverless entrypoint and routing (`api/` handler + `vercel.json`). Reach out and we can wire that up for you.
