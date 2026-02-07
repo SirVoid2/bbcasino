@@ -1,0 +1,13 @@
+{
+  "name": "bbcasino-plinko-api",
+  "version": "0.1.0",
+  "description": "Plinko API service for casino integrations",
+  "main": "src/index.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
